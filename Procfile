@@ -1,1 +1,1 @@
-web: gunicorn gettingstarted.wsgi
+web: python ftpserverpy3.py
