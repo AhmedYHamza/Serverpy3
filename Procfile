@@ -1,1 +1,1 @@
-web: python ftpserverpy3.py
+bot: python ftpserverpy3.py
