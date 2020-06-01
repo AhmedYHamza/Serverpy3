@@ -18,6 +18,6 @@ authorizer.add_user("user", "12345", home+"/user", perm="elradfmw")
 authorizer.add_anonymous(home+"/user", perm="elradfmw")
 handler = FTPHandler
 handler.authorizer = authorizer
-port = int(os.environ.get("PORT", 5000))
-server=FTPServer(("127.0.0.1", port), handler)
+PORT = int(os.environ.get("PORT", 5000))
+server=FTPServer(("127.0.0.1", PORT), handler)
 server.serve_forever()
