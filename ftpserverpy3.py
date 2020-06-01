@@ -20,6 +20,4 @@ handler = FTPHandler
 handler.authorizer = authorizer
 PORT = int(os.environ.get("PORT", 5000))
 server=FTPServer(("127.0.0.1", PORT), handler)
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind((PORT,$PORT))
 server.serve_forever()
