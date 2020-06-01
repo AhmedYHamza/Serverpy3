@@ -1,1 +1,1 @@
-web: python ftpserverpy3.py 
+web: python ftpserverpy3.py $port
