@@ -10,7 +10,8 @@ def find_free_port():
     with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
         s.bind(('', 0))
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    return s.getsockname()[1]home = expanduser("~")
+        return s.getsockname()[1]
+home = expanduser("~")
 os.mkdir(home+"/user")
 authorizer = DummyAuthorizer()
 authorizer.add_user("user", "12345", home+"/user", perm="elradfmw")
