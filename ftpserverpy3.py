@@ -22,4 +22,4 @@ PORT = int(os.environ.get("PORT", 5000))
 server=FTPServer(("0.0.0.0", PORT), handler)
 server.serve_forever()
 if server:
-    200
+    HTTP/1.1 200 OK
