@@ -1,1 +1,1 @@
-web: python ftpserverpy3.py runtime 127.0.0.1:$PORT
+web: python ftpserverpy3.py runtime 192.168.1.127:$PORT
