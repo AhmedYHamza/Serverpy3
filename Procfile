@@ -1,1 +1,1 @@
-web: python ftpserverpy3.py runserver 0.0.0.0:5000
+web: python ftpserverpy3.py $PORT
