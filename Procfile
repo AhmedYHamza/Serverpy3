@@ -1,1 +1,1 @@
-web: python ftpserverpy3.py ${PORT}
+worker: python ftpserverpy3.py $PORT
