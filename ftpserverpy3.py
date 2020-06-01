@@ -4,7 +4,6 @@ from pyftpdlib.servers import FTPServer
 from os.path import expanduser
 import os
 import socket
-import http
 from contextlib import closing
 
 def find_free_port():
