@@ -4,6 +4,7 @@ from pyftpdlib.servers import FTPServer
 from os.path import expanduser
 import os
 import socket
+import http
 from contextlib import closing
 
 def find_free_port():
@@ -22,4 +23,4 @@ PORT = int(os.environ.get("PORT", 5000))
 server=FTPServer(("0.0.0.0", PORT), handler)
 server.serve_forever()
 if server:
-    200
+    send_response(200, message=ok)
