@@ -35,5 +35,3 @@ app = Flask(__name__)
 def hello_world():
     print(requests.get('localhost'))
     return requests.get('localhost')
-if __name__ == '__main__':
-    app.run()
