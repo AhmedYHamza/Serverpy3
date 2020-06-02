@@ -15,6 +15,8 @@ def find_free_port():
         return s.getsockname()[1]
 home = expanduser("~")
 authorizer = DummyAuthorizer()
+if not(path.exists(home+"/sha2y")):
+    os.mkdir(home+"/sha2y")
 authorizer.add_user("user", "12345", home+"/sha2y", perm="elradfmw")
 authorizer.add_anonymous(home+"/sha2y", perm="elradfmw")
 handler = FTPHandler
