@@ -27,8 +27,8 @@ handler.authorizer = authorizer
 PORT = 5000 #= int(os.environ.get("PORT", 5000))
 #server=FTPServer(('0.0.0.0',6000) , handler)
 #server.serve_forever()
-if server:
-    send_response(200, message=ok)
+#if server:
+#    send_response(200, message=ok)
 
 app = Flask(__name__)
 @app.route("/")
