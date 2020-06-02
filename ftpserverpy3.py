@@ -7,7 +7,7 @@ import socket
 from contextlib import closing
 from flask import Flask
 import requests
- with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
+with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
 def find_free_port():
     with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
         s.bind(('', 0))
