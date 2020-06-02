@@ -5,6 +5,14 @@ from os.path import expanduser
 import os
 import socket
 from contextlib import closing
+from flask import Flask
+
+app = Flask(__name__)
+@app.route('/')
+
+def hello_world():
+    return 'Hello World!'
+
 
 def find_free_port():
     with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
@@ -23,3 +31,5 @@ server=FTPServer(("0.0.0.0", PORT), handler)
 server.serve_forever()
 if server:
     send_response(200, message=ok)
+if __name__ == '__main__':
+    app.run
