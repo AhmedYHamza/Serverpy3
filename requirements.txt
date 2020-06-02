@@ -1,2 +1,3 @@
 pyftpdlib
 Flask
+requests
