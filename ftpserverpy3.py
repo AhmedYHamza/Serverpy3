@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
+    print(requests.get('0.0.0.0'))
     return requests.get('0.0.0.0')
 app.run
 
