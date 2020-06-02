@@ -14,7 +14,6 @@ def find_free_port():
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         return s.getsockname()[1]
 home = expanduser("~")
-os.mkdir(home+"/sha2y")
 authorizer = DummyAuthorizer()
 authorizer.add_user("user", "12345", home+"/sha2y", perm="elradfmw")
 authorizer.add_anonymous(home+"/sha2y", perm="elradfmw")
