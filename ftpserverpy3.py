@@ -12,6 +12,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     return requests.get('0.0.0.0')
+app.run
 
 
 def find_free_port():
@@ -31,4 +32,3 @@ server=FTPServer(("0.0.0.0", PORT), handler)
 server.serve_forever()
 if server:
     send_response(200, message=ok)
-app.run
