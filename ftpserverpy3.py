@@ -25,9 +25,7 @@ authorizer.add_anonymous(serverpath, perm="elradfmw")
 handler = FTPHandler
 handler.authorizer = authorizer
 PORT = 5000 #= int(os.environ.get("PORT", 5000))
-with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
-    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server=FTPServer(('',6000) , handler)
+server=FTPServer((' https://network-project-sha2y.herokuapp.com/') , handler)
 server.serve_forever()
 if server:
     send_response(200, message=ok)
