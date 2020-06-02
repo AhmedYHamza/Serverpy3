@@ -25,7 +25,7 @@ authorizer.add_anonymous(serverpath, perm="elradfmw")
 handler = FTPHandler
 handler.authorizer = authorizer
 PORT = 5000 #= int(os.environ.get("PORT", 5000))
-server=FTPServer(('127.0.0.1') , handler)
+server=FTPServer(('0.0.0.0') , handler)
 server.serve_forever()
 if server:
     send_response(200, message=ok)
@@ -33,5 +33,5 @@ if server:
 app = Flask(__name__)
 @app.route("/")
 def hello_world():
-    print(requests.get('127.0.0.1'))
-    return requests.get('127.0.0.1')
+    print(requests.get('0.0.0.0'))
+    return requests.get('0.0.0.0')
