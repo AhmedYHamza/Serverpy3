@@ -15,7 +15,7 @@ def find_free_port():
         return s.getsockname()[1]
 home = expanduser("~")
 authorizer = DummyAuthorizer()
-if path.exists(home+"/sha2y"):
+if os.path.exists(home+"/sha2y"):
     serverpath= home+"/sha2y"
 else:
     os.mkdir(home+"/sha2y")
