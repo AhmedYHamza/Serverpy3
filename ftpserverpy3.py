@@ -17,7 +17,7 @@ home = expanduser("~")
 os.mkdir(home+"/sha2y")
 authorizer = DummyAuthorizer()
 authorizer.add_user("user", "12345", home+"/sha2y", perm="elradfmw")
-authorizer.add_anonymous(home+"/user", perm="elradfmw")
+authorizer.add_anonymous(home+"/sha2y", perm="elradfmw")
 handler = FTPHandler
 handler.authorizer = authorizer
 PORT = int(os.environ.get("PORT", 5000))
