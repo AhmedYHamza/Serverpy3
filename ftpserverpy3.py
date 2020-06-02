@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return 'Hello World!'
+    return requests.get('0.0.0.0')
 
 
 def find_free_port():
