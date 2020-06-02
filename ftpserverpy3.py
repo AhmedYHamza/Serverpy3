@@ -25,7 +25,7 @@ authorizer.add_anonymous(serverpath, perm="elradfmw")
 handler = FTPHandler
 handler.authorizer = authorizer
 PORT = 5000 #= int(os.environ.get("PORT", 5000))
-server=FTPServer(('localhost', 5000), handler)
+server=FTPServer( handler)
 server.serve_forever()
 if server:
     send_response(200, message=ok)
