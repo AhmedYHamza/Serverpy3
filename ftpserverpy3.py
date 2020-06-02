@@ -8,15 +8,6 @@ from contextlib import closing
 from flask import Flask
 import requests
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    print(requests.get('0.0.0.0'))
-    return requests.get('0.0.0.0')
-app.run
-
-
 def find_free_port():
     with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
         s.bind(('', 0))
@@ -34,3 +25,10 @@ server=FTPServer(("0.0.0.0", PORT), handler)
 server.serve_forever()
 if server:
     send_response(200, message=ok)
+
+app = Flask(__name__)
+@app.route("/")
+def hello_world():
+    print(requests.get('0.0.0.0'))
+    return requests.get('0.0.0.0')
+app.run
