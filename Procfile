@@ -1,1 +1,1 @@
-web: gunicorn ftpserverpy3.py runtime 0.0.0.0:$PORT
+web: gunicorn ftpserverpy3.py runtime 127.0.0.1:$PORT
