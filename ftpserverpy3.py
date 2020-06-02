@@ -6,6 +6,7 @@ import os
 import socket
 from contextlib import closing
 from flask import Flask
+import requests
 
 app = Flask(__name__)
 
