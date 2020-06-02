@@ -1,1 +1,1 @@
-web: gunicorn ftpserverpy3:ftpserverpy3
+web: python ftpserverpy3.py $PORT
